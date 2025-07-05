@@ -6,6 +6,33 @@
     <title>ゲーム - 八田悠</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .game-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .game-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        .game-logo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 1rem 0;
+        }
+    </style>
 </head>
 <body class="body">
     <header class="header">
@@ -23,13 +50,30 @@
     <main>
         <section id="favorite-game">
             <h2>お気に入りのゲーム</h2>
+            <div class="image-container">
+                <img src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/logo-pokemon-unite.png" 
+                     alt="ポケモンユナイト ロゴ" 
+                     class="game-logo">
+            </div>
             <p>特に好きなゲームは<strong>ポケモンユナイト</strong>です。</p>
             <p>チーム戦略やキャラクターの個性を活かした戦闘が楽しいです。</p>
+            
+            <h3>好きなポケモン</h3>
+            <ul>
+                <li>アマージョ - 優雅で美しい草タイプのポケモン</li>
+                <li>ミミッキュ - 可愛らしい見た目と強力な能力が魅力</li>
+                <li>ダークライ - 幻のポケモンで神秘的な存在</li>
+            </ul>
         </section>
         
         <section id="other-games">
             <h2>その他のゲーム</h2>
             <p>他にも様々なゲームを楽しんでいます。</p>
+            <ul>
+                <li>アクションゲーム</li>
+                <li>RPG</li>
+                <li>パズルゲーム</li>
+            </ul>
         </section>
     </main>
     <footer class="footer">
