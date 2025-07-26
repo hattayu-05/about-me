@@ -3,42 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム - 八田悠</title>
+    <title>ホーム - 山下悠のサイト</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="body">
+<body>
     <header class="header">
         <nav class="nav">
             <ul>
-                <li><a href="home.html">ホーム</a></li>
+                <li><a href="home.html" class="current">ホーム</a></li>
                 <li><a href="about.html">自己紹介</a></li>
                 <li><a href="game.html">ゲーム</a></li>
                 <li><a href="artist.html">アーティスト</a></li>
                 <li><a href="index.html">お問い合わせ</a></li>
             </ul>
         </nav>
-        <h1>八田悠のサイト</h1>
+        <h1>山下悠のサイト</h1>
     </header>
+
     <main>
-        <section id="welcome">
-            <h2>ようこそ</h2>
-            <p>八田悠のサイトへようこそ！</p>
-            <p>このサイトでは私の自己紹介、好きなゲーム、好きなアーティストについて紹介しています。</p>
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="image/240_F_606189866_5Fk3hd5mv4OPW6A7QfHsY6lRZcS5Hhsw.jpg" alt="ウェルカム画像">
+                <div class="slide-content">
+                    <h2>ようこそ山下悠のサイトへ</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/91e382e3e87726746dc714d3cab616a57ead6d797cff8c2f757b448534ce7cf4.webp" alt="ゲーム画像">
+                <div class="slide-content">
+                    <h2>ゲームの世界</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/music_top-710x400-1.webp" alt="音楽画像">
+                <div class="slide-content">
+                    <h2>音楽のある生活</h2>
+                </div>
+            </div>
+        </div>
+
+        <section id="site-about">
+            <h2>このサイトについて</h2>
+            <p>こんにちは！山下悠です。</p>
+            <p>このサイトは、私の趣味であるゲームや音楽について情報を発信し、同じ趣味を持つ方々と交流を深めることを目的として作成しました。</p>
+            <p>特にポケモンユナイトをはじめとするゲームの攻略情報や、幅広いジャンルの音楽紹介を中心に、エンターテイメント関連の話題をお届けしています。</p>
         </section>
-        
-        <section id="navigation-info">
-            <h2>サイト案内</h2>
-            <ul>
-                <li><a href="about.html">自己紹介</a> - プロフィールと趣味について</li>
-                <li><a href="game.html">ゲーム</a> - 好きなゲームについて</li>
-                <li><a href="artist.html">アーティスト</a> - 好きなアーティストについて</li>
-                <li><a href="index.html">お問い合わせ</a> - 連絡先とお問い合わせフォーム</li>
+
+        <section id="latest-updates">
+            <h2>最新の更新</h2>
+            <ul class="update-list">
+                <li><strong>2024年12月</strong> - ポケモンユナイトの新しい戦略について追加しました</li>
+                <li><strong>2024年11月</strong> - お気に入りのアーティストページを更新</li>
+                <li><strong>2024年10月</strong> - サイトをリニューアルしました</li>
             </ul>
         </section>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3 class="card-title">🎮 ゲーム</h3>
+                <p class="card-description">ポケモンユナイトをメインに、様々なゲームの攻略法や楽しみ方を紹介。</p>
+                <a href="game.html" class="card-button">ゲームページへ</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">🎵 音楽</h3>
+                <p class="card-description">普段聴いている音楽やおすすめのアーティストを幅広く紹介。</p>
+                <a href="artist.html" class="card-button">音楽ページへ</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">👤 私について</h3>
+                <p class="card-description">管理人の詳しいプロフィールや趣味、考え方について。</p>
+                <a href="about.html" class="card-button">自己紹介へ</a>
+            </div>
+        </div>
+
     </main>
+
     <footer class="footer">
-        <p>&copy; 2024 八田悠のサイト</p>
+        <p>&copy; 2024 山下悠のサイト</p>
     </footer>
+
+    <script>
+        // スライダー機能
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        setInterval(nextSlide, 4000);
+
+        // カードホバーアニメーション
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
 </body>
 </html>

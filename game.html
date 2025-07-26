@@ -3,81 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ゲーム - 八田悠</title>
+    <title>好きなゲーム - 山下悠</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .game-image {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            margin: 1rem 0;
-            transition: transform 0.3s ease;
-        }
-        
-        .game-image:hover {
-            transform: scale(1.05);
-        }
-        
-        .image-container {
-            text-align: center;
-            margin: 1.5rem 0;
-        }
-        
-        .game-logo {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            margin: 1rem 0;
-        }
-    </style>
 </head>
-<body class="body">
+<body>
     <header class="header">
         <nav class="nav">
             <ul>
                 <li><a href="home.html">ホーム</a></li>
                 <li><a href="about.html">自己紹介</a></li>
-                <li><a href="game.html">ゲーム</a></li>
+                <li><a href="game.html" class="current">ゲーム</a></li>
                 <li><a href="artist.html">アーティスト</a></li>
                 <li><a href="index.html">お問い合わせ</a></li>
             </ul>
         </nav>
         <h1>好きなゲーム</h1>
     </header>
+
     <main>
-        <section id="favorite-game">
-            <h2>お気に入りのゲーム</h2>
-            <div class="image-container">
-                <img src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/logo-pokemon-unite.png" 
-                     alt="ポケモンユナイト ロゴ" 
-                     class="game-logo">
-            </div>
-            <p>特に好きなゲームは<strong>ポケモンユナイト</strong>です。</p>
-            <p>チーム戦略やキャラクターの個性を活かした戦闘が楽しいです。</p>
-            
-            <h3>好きなポケモン</h3>
-            <ul>
-                <li>アマージョ - 優雅で美しい草タイプのポケモン</li>
-                <li>ミミッキュ - 可愛らしい見た目と強力な能力が魅力</li>
-                <li>ダークライ - 幻のポケモンで神秘的な存在</li>
-            </ul>
+        <section id="game-hero">
+            <img src="image/26665-635-69bbf9539f15027ddb369626c303c413-3900x2113.webp" alt="ポケモンユナイト画像" class="game-hero-image">
+            <h2>ポケモンユナイト</h2>
+            <p>私が最も愛するゲームです。5対5のチームバトルで戦略性が高く、チームワークが重要なゲームです。</p>
         </section>
         
-        <section id="other-games">
-            <h2>その他のゲーム</h2>
-            <p>他にも様々なゲームを楽しんでいます。</p>
-            <ul>
-                <li>アクションゲーム</li>
-                <li>RPG</li>
-                <li>パズルゲーム</li>
-            </ul>
+        <section id="favorite-pokemon">
+            <h2>お気に入りのポケモン</h2>
+            <div class="pokemon-grid">
+                <div class="pokemon-card" onclick="showPokemonInfo(this, 'アマージョ')">
+                <h3>アマージョ</h3>
+                <img src="image/0a73f9d19ee32f53cfa063baaf2e5b5a.avif" alt="アマージョ">
+                <div class="pokemon-info hidden">
+                    <p><strong>女王のような威厳</strong> - 草タイプのアマージョは、優雅で美しい見た目と強力なサポート能力を兼ね備えています。オールラウンダー型として、攻撃もサポートもこなせる万能なポケモンです。初心者から上級者まで幅広く愛用され、チームの中核として活躍できます。</p>
+                </div>
+            </div>
+
+            <div class="pokemon-card" onclick="showPokemonInfo(this, 'ミミッキュ')">
+                <h3>ミミッキュ</h3>
+                <img src="image/39249b83fd19df3786d1bd18a088197e.webp" alt="ミミッキュ">
+                <div class="pokemon-info hidden">
+                    <p><strong>化けの皮の奇襲者</strong> - ゴースト・フェアリータイプのミミッキュは、見た目の可愛さとは裏腹に恐ろしい戦闘力を秘めています。スピード型として高い機動力を活かし、相手の裏をかく奇襲攻撃が得意です。「ばけのかわ」の特性により一度だけダメージを無効化でき、カウンター攻撃のチャンスを作り出します。</p>
+                </div>
+            </div>
+
+            <div class="pokemon-card" onclick="showPokemonInfo(this, 'ダークライ')">
+                <h3>ダークライ</h3>
+                <img src="image/725e03c64c63fe2a03e672dcdb563f4d.webp" alt="ダークライ">
+                <div class="pokemon-info hidden">
+                    <p><strong>悪夢を司る幻のポケモン</strong> - あくタイプの伝説ポケモンであるダークライは、神秘的で圧倒的な存在感を放ちます。テクニック型として独特な操作感を持ち、相手を眠らせる「ダークホール」などの特殊技が魅力です。操作は難しいですが、使いこなせば戦場を支配できる上級者向けの強力なポケモンです。</p>
+                </div>
+            </div>
+
+            <div class="pokemon-card" onclick="showPokemonInfo(this, 'ギルガルド')">
+                <h3>ギルガルド</h3>
+                <img src="image/はくしゃくスタイルギルガルド.png.webp" alt="ギルガルド">
+                <div class="pokemon-info hidden">
+                    <p><strong>盾と剣の王者</strong> - 鋼・ゴーストタイプのギルガルドは、シールドフォルムとブレードフォルムを使い分ける特殊なポケモンです。ディフェンス型として、シールドフォルムでは堅牢な守りでチームを支え、ブレードフォルムでは強力な反撃を繰り出します。フォルムチェンジのタイミングが戦略の鍵となる、非常に奥深い上級者向けのポケモンです。</p>
+                </div>
+            </div>
         </section>
-    </main>
+
+        <section id="gaming-strategy">
+            <h2>ゲームの基本</h2>
+            <ul class="strategy-list">
+                <li onclick="highlightStrategy(this)"><strong>５対５のチーム戦</strong> - 2つのチームに分かれて、制限時間内にスコアを競います。</li>
+                <li onclick="highlightStrategy(this)"><strong>ルール</strong> - 相手チームのゴールに得点を入れ、より多くの得点を獲得したチームが勝利します。</li>
+                <li onclick="highlightStrategy(this)"><strong>１０分の試合</strong> - 短時間で決着がつくため、気軽にプレイできます。</li>
+                <li onclick="highlightStrategy(this)"><strong>基本無料</strong> - 誰でも気軽に始められるゲームです。</li>
+            </ul>
     <footer class="footer">
-        <p>&copy; 2024 八田悠のサイト</p>
+        <p>&copy; 2024 山下悠のサイト</p>
     </footer>
+
+    <script>
+        // ポケモン情報表示
+        function showPokemonInfo(card, pokemonName) {
+            const info = card.querySelector('.pokemon-info');
+            card.classList.toggle('expanded');
+            info.classList.toggle('hidden');
+        }
+
+        // 戦略ハイライト
+        function highlightStrategy(item) {
+            item.classList.toggle('highlighted');
+            setTimeout(() => {
+                item.classList.remove('highlighted');
+            }, 2000);
+        }
+
+        // ゲーム名言表示
+        function showGameQuote() {
+            const quote = document.getElementById('gameQuote');
+            quote.classList.toggle('hidden');
+        }
+
+        // ポケモンカードホバーエフェクト
+        document.querySelectorAll('.pokemon-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) rotate(2deg)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+    </script>
 </body>
 </html>
