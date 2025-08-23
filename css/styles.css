@@ -778,6 +778,60 @@ GAME PAGE SPECIFIC
     border-color: #3498db;
 }
 
+/*
+ARTIST PAGE - DISCOVERY SECTION
+================================================ */
+
+/* 音楽発見方法のアイテム */
+.discovery-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.discovery-item {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e8f0fe;
+}
+
+.discovery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.discovery-item img {
+    width: 100px; /* ここでサイズを調整 */
+    height: 100px; /* ここでサイズを調整 */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 3px solid #3498db;
+}
+
+.discovery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.3);
+}
+
+.discovery-item h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.discovery-item p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin: 0;
+}
 .pokemon-card img {
     width: 180px;
     height: 180px;
