@@ -1,3 +1,4 @@
+cat > readme.html << 'EOF'
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,7 +12,7 @@
     <header class="header">
         <nav class="nav">
             <ul>
-                <li><a href="home.html" class="current">ホーム</a></li>
+                <li><a href="readme.html" class="current">ホーム</a></li>
                 <li><a href="about.html">自己紹介</a></li>
                 <li><a href="game.html">ゲーム</a></li>
                 <li><a href="artist.html">音楽</a></li>
@@ -52,6 +53,12 @@
 
         <div class="cards-grid">
             <div class="card">
+                <h3 class="card-title">👤 自己紹介</h3>
+                <p class="card-description">管理人の詳しいプロフィールや趣味、考え方について。</p>
+                <a href="about.html" class="card-button">自己紹介へ</a>
+            </div>
+            
+            <div class="card">
                 <h3 class="card-title">🎮 ゲーム</h3>
                 <p class="card-description">ポケモンユナイトをメインに、様々なゲームの攻略法や楽しみ方を紹介。</p>
                 <a href="game.html" class="card-button">ゲームページへ</a>
@@ -61,12 +68,6 @@
                 <h3 class="card-title">🎵 音楽</h3>
                 <p class="card-description">普段聴いている音楽やおすすめのアーティストを幅広く紹介。</p>
                 <a href="artist.html" class="card-button">音楽ページへ</a>
-            </div>
-            
-            <div class="card">
-                <h3 class="card-title">👤 自己紹介</h3>
-                <p class="card-description">管理人の詳しいプロフィールや趣味、考え方について。</p>
-                <a href="about.html" class="card-button">自己紹介へ</a>
             </div>
         </div>
 
@@ -102,3 +103,4 @@
     </script>
 </body>
 </html>
+EOF
